@@ -4,6 +4,8 @@
 npm install
 ```
 
+Then install [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/) too.
+
 ## How to run in debug mode
 
 ```sh
