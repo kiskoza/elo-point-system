@@ -38,7 +38,7 @@ class Game extends Component {
 
   render() {
     return (
-      <div>
+      <div class='main'>
         <NewPlayer onSaveName={this.onSaveName} />
         <ScoreBoard players={this.state.players} />
         <Play players={this.state.players} onPlayClick={this.onPlay} />

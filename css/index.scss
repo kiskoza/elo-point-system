@@ -1,0 +1,25 @@
+.main {
+  border: solid black;
+  border-radius: 1em;
+  margin: 0 auto;
+  padding: 2em;
+  width: 30em;
+}
+
+.new-player {
+  text-align: center;
+}
+
+.match {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  input[type="submit"] {
+    margin: 0 auto;
+  }
+}

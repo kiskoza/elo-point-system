@@ -41,25 +41,25 @@ class Play extends Component {
     }
 
     return (
-      <div>
+      <div class="match">
         <label>
           Winner:
+          <select onChange={this.onChangeWinner} selected={this.state.winner}>
+            <option key='__empty' value=''>Select a winner</option>
+            {this.props.players.map((player, index)=>{
+              return <option key={player.name} value={player.name}>{player.name}</option>;
+            })}
+          </select>
         </label>
-        <select onChange={this.onChangeWinner} selected={this.state.winner}>
-          <option key='__empty' value=''>Select a winner</option>
-          {this.props.players.map((player, index)=>{
-            return <option key={player.name} value={player.name}>{player.name}</option>;
-          })}
-        </select>
         <label>
           Loser:
+          <select onChange={this.onChangeLoser} selected={this.state.loser}>
+            <option key='__empty' value=''>Select a loser</option>
+            {this.props.players.map((player, index)=>{
+              return <option key={player.name} value={player.name}>{player.name}</option>;
+            })}
+          </select>
         </label>
-        <select onChange={this.onChangeLoser} selected={this.state.loser}>
-          <option key='__empty' value=''>Select a loser</option>
-          {this.props.players.map((player, index)=>{
-            return <option key={player.name} value={player.name}>{player.name}</option>;
-          })}
-        </select>
         <input type="submit" value="Play!" onClick={this.onPlayClick} disabled={this.isValidMatch()} />
       </div>
     )

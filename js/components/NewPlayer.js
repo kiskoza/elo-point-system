@@ -27,8 +27,8 @@ class NewPlayer extends Component {
 
   render() {
     return (
-      <div>
-        <input placeholder="Gizike" value={this.state.name} onChange={this.changeName} />
+      <div class="new-player">
+        <input placeholder="Player" value={this.state.name} onChange={this.changeName} />
         <input type="button" value="Hozzáad" onClick={this.saveName} />
       </div>
     )
